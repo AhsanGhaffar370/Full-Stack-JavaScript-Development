@@ -11,13 +11,13 @@ function current_date(){
 }
 
 var name = prompt("What is your name?", "Ahsan");
-console.log(name);
+console.log("Your name is:",name);
 
 var age = prompt("What is your age?");
 // new_age=parseInt(age)+5;
 // new_age=parseFloat(age)+5;
 new_age=Number(age)+5;
-console.log(new_age);
+console.log("Your age is;",new_age);
 
 
 var person = {
@@ -40,6 +40,7 @@ console.log(person.fullName());
 /////////////////////////
 
 var fruits = ["Banana", "Orange", "Apple", "Mango"];
+var arr2 = ["dog" , "cat" , "bird"];
 
 //toString() converts array to a string of (comma separated) array values.
 document.getElementById("arr1").innerHTML = fruits.toString(); 
@@ -47,6 +48,16 @@ document.getElementById("arr1").innerHTML = fruits.toString();
 //var x = fruits.pop();      // Removes the last element ("Mango") and save it in x
 //var x = fruits.push("Kiwi"); // the value of x is 5
 
+var res12 = arr2.shift();
+var res12 = arr2.unshift("mice","ostrich");
+
+// splice(start_point, replace, val1,val2,....)
+// start_point= index of array from where we want to start adding
+// replace= num of elements we want to remove from start_point
+arr2.splice("mice2","ostrich2");
+
+
+console.log("shift function remove and return first element of array:", res12)
 
 
 /////////////////////////
@@ -83,6 +94,8 @@ var res10 = str2.toUpperCase();
 var res11 = str2.toLowerCase();
 
 
+
+
 console.log("Length of string:", len);
 console.log("indexOf:",ind1);
 console.log("index of last:",ind2);
@@ -99,6 +112,21 @@ console.log("replace with case insensitive:",res8);
 console.log("replace all:",res9);
 console.log("to upper case:",res10);
 console.log("to lower case:",res11);
+
+
+
+/////////////////////////
+//Math Functions
+/////////////////////////
+
+var num1=23.45647283;
+
+console.log("ceil() function:", Math.ceil(num1));
+console.log("floor() function:", Math.floor(num1));
+console.log("round() function:", Math.round(num1));
+console.log("fixed() function:", num1.toFixed(2));
+console.log("round() function:", Math.round(num1));
+
 
 
 /////////////////////////
