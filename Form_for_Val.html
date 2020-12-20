@@ -46,11 +46,11 @@
     <section class="con70 verCen" id="contact_1">
 
         <!-- Form Starts -->
-        <form class="needs-validation1" id="form1" method="post" action="" onsubmit="return validate_form()">
+        <form class="needs-validation1" name="form52" id="form1" method="POST" action="" onsubmit="return validate_form()">
 
             <div class="form-group">
-                <label class="b8" for="fname1">Full Name*:</label>
-                <input type="text" class="form-control p-4" id="fname1" name="fname" placeholder="Full Name" />
+                <label class="b8" for="name1">Full Name*:</label>
+                <input type="text" class="form-control p-4" id="name1" name="name" placeholder="Full Name" />
             </div>
 
 
@@ -112,7 +112,50 @@
     </section>
 
 
+    <!-- 
+    ################## 
+        JAVASCRIPT 
+    ###################  
+    -->
+    <script type="text/javascript">
 
+    function validate_email(email){
+
+        var email_re= new RegExp(/^\w+@\w+(\.\w+)+$/);
+        return email_re.test(email);
+        
+        
+        if (email.length < 1) {
+            $("#email").css({"border":	"1px solid red" , "padding" : "10px"});
+            $('#email').after('<span style="font-size:13px; color:#900;" class="error">Email is required</span>');
+            $("#email").focus();
+            return false;
+        } 
+        else if(!eregex.test(email)){
+            $("#email").css({"border":	"1px solid red" , "padding" : "10px"});
+            $("#email").after('<span style="font-size:13px; color:#900;" class="error">Please provide valid Email i.e:xxx@gmail.com</span>');
+            $("#email").focus();
+            return false;
+
+        } else{	
+            $("#email").css({"border":	"2px solid green" , "padding" : "10px"});
+            return true;
+        }
+    }
+        
+        function validate_form(){
+
+            var name= document.forms['form52']['name'].value;
+            var email= document.forms['form52']['email'].value;
+            var gender= document.forms['form52']['gender'].value;
+            var phone= document.forms['form52']['phoneNo'].value;
+
+
+            console.log(name, email, gender, phone);
+
+            return false;
+        }
+    </script>
 
 
 
@@ -132,24 +175,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
-
-
-    <!-- 
-    ################## 
-        JAVASCRIPT 
-    ###################  
-    -->
-    <script type="text/javascript">
-        
-        function validate_form(){
-
-            var name=$("name").text;
-
-            console.log(name);
-
-            return false;
-        }
-    </script>
 
 </body>
 
