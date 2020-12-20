@@ -1,1 +1,0 @@
-var abc="blank 2";
