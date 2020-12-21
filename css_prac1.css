@@ -615,7 +615,7 @@ a:hover {
 
 .btn_block {
     width: 100% !important;
-    padding: 22px 30px !important;
+    /* padding: 22px 30px !important; */
 }
 
 
