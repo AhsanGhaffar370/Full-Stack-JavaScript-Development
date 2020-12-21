@@ -1,5 +1,47 @@
 $(document).ready(function() {
 
+    $(".img1").mouseenter(function() {
+        $(".img1").css({ "border": "1px solid red" });
+    });
+
+    $(".img1").mouseleave(function() {
+        $(".img1").css({ "border": "0px" });
+    });
+
+
+    $("#p1").hover(function() {
+            $("#p1").after('<span id="err" class="size13 cl_r b7 d_in">paragraph hover</span>');
+        },
+        function() {
+            $("#err").hide();
+        });
+
+
+    $(".hide1").click(function() {
+        $(".p2").hide(1000);
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$(document).ready(function() {
+
     $("#email").focusout(function() {
         check_mail();
     });
