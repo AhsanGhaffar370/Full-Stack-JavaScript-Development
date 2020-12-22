@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>First PHP Program</title>
+
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes" />
+    <!-- Always put in header For ajax and jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="css_prac1.css" type="text/css" rel="stylesheet" media="screen" />
+    <!-- Bootstrap CSS (Latest compiled and minified CSS)-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/7516c4b4cc.js" crossorigin="anonymous"></script>
+
+    <!-- ################## CSS ###################  -->
+    <style rel="stylesheet">
+        .largeMe {
+            font-size: 24px;
+            font-weight: 700;
+        }
+    </style>
+
+</head>
+
+<body class="m-5">
+
+
+
+
+
+    <h4 class="btn_block bg_g cl_b mb-4 ">Example1</h4>
+
+
+    <a href="JavaScript:void(0)" onclick="alert('Hi');">Click</a>
+
+    <input type="button" value="Click" onclick="popup('Hello world!');">
+
+
+    <h4 class="btn_block bg_g cl_b mb-4 ">Example2</h4>
+
+    <img src="Imp_imgs/github_action1.PNG" id="swap" width="500" height="200" onmouseover="afterImg(id, 'Imp_imgs/github_action2.PNG');" onmouseout="beforeImg(id, 'Imp_imgs/github_action1.PNG');">
+
+
+    <h4 class="btn_block bg_g cl_b mb-4 ">Example3</h4>
+
+    <p onmouseover="this.style.color='red';">Hover me</p>
+
+    <h4 class="btn_block bg_g cl_b mb-4 ">Example4</h4>
+
+    <span>Name</span>
+    <input type="text" size="30" onfocus="this.style.backgroundColor='yellow';" onblur="this.style.backgroundColor='white';">
+
+
+    <h4 class="btn_block bg_g cl_b mb-4 ">Example5</h4>
+
+    <form>
+        ZIP:
+        <input type="text" id="zip" onkeyup="fillCity();"> City:
+        <input type="text" id="city">
+
+        <input type="submit" value="Submit">
+    </form>
+
+
+
+    <h4 class="btn_block bg_g cl_b mb-4 ">Example6</h4>
+
+    <p id="slowLoris">
+        Slow loris | Fast loris | Just-right loris
+        <a href="javascript:void(0);" onclick="expandLoris();"><em>Make it a list</em></a>
+    </p>
+
+    <h4 class="btn_block bg_g cl_b mb-4 ">Example7</h4>
+
+    <p class="cl_w bg_bp" id="ugly" onclick="makeLarge();">Click this text to make it large</p>
+
+    <h4 class="btn_block bg_g cl_b mb-4 ">Example8</h4>
+
+    <p id="sty" class="bg_bp" onmouseover="changeStyle(id)">Hover this text to change it's style</p>
+
+
+
+    <!-- ################## JavaScript ###################  -->
+    <script type="text/javascript">
+        function popup(message) {
+            alert(message);
+        }
+
+        function afterImg(id, path) {
+            document.getElementById(id).src = path;
+        }
+
+        function beforeImg(id, path) {
+            document.getElementById(id).src = path;
+        }
+
+        function fillCity() {
+            var cityName;
+            var zipEntered = document.getElementById("zip").value;
+            switch (zipEntered) {
+                case "60608":
+                    cityName = "Chicago";
+                    break;
+                case "68114":
+                    cityName = "Omaha";
+                    break;
+                default:
+                    cityName = "no city";
+            }
+            document.getElementById("city").value = cityName;
+        }
+
+        function expandLoris() {
+            var listToPlace = "<ol><li>Slow loris</li><li>Fast loris</li><li>Just-right loris</li></ol>";
+            document.getElementById("slowLoris").innerHTML = listToPlace;
+        }
+
+        function makeLarge() {
+            var ugly = document.getElementById("ugly");
+            ugly.className += " largeMe";
+            ugly.innerHTML = "Don't Click this text to make it small";
+        }
+
+        function changeStyle(id) {
+            var st = document.getElementById(id);
+
+            // st.style.visibility = "hidden";
+            st.style.fontSize = "20px";
+            // st.style.cssFloat = "right";
+            st.style.padding = "20px 20px 20px 20px";
+        }
+    </script>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
+
+</body>
+
+</html>
