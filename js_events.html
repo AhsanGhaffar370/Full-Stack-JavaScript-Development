@@ -80,6 +80,23 @@
     <p id="sty" class="bg_bp" onmouseover="changeStyle(id)">Hover this text to change it's style</p>
 
 
+    <h4 class="btn_block bg_g cl_b mb-4 ">Example9</h4>
+
+    <div id="div1" class="bg_bp" onclick="doom()">
+        <p id="p5">first paragraph</p>
+        <p id="p6">second paragraph</p>
+    </div>
+
+    <h4 class="btn_block bg_g cl_b mb-4 ">Example10</h4>
+
+    <p id="p11" class="cl_bd bg_c" onclick="dom_attribute()">Click this text</p>
+
+
+    <h4 class="btn_block bg_g cl_b mb-4 ">Example11</h4>
+
+    <p id="p12" class="cl_bd bg_r size30 " onclick="delete_class()">Click this text</p>
+
+
 
     <!-- ################## JavaScript ###################  -->
     <script type="text/javascript">
@@ -129,6 +146,42 @@
             st.style.fontSize = "20px";
             // st.style.cssFloat = "right";
             st.style.padding = "20px 20px 20px 20px";
+        }
+
+        function doom() {
+            var parent = document.getElementById("div1");
+
+            console.log(document.all);
+
+            //empty spaces ki waja se div1 ke actually 5 child he; #text, p, #text, p, #text 
+            // js waja se hmare 1st <p> ki positions 1 he or 2nd <p> ki position 3 he
+            parent.childNodes[1].innerHTML += "<span class='cl_r'> changed</span>";
+            // parent.firstChild.innerHTML += "<span class='cl_r'> changed</span>";
+
+            // parent.childNodes[3].innerHTML += "<span class='cl_r'> changed</span>";
+            // parent.lastChild.innerHTML += "<span class='cl_r'> changed</span>";
+
+            var para = document.getElementById("p5");
+            // para.nextSibling;
+            // para.previousSibling;
+        }
+
+        function dom_attribute() {
+            var target = document.getElementById("p11");
+            var hasClass = target.hasAttribute("class");
+            var attVal = target.getAttribute("class");
+            var classesVal = attVal + " b8 size20";
+            var setattr = target.setAttribute("class", classesVal);
+            target.setAttribute("style", "border: 1px solid red;");
+            // in the same we way, we can add almost any attribute like href, type, id, value etc
+            var totalAttr = target.attributes.length;
+
+            alert("p11 has class attribute? " + hasClass + "\np11 has total attributes: " + totalAttr + "\np11 class attribute is: " + attVal + "\np11 attribute is set as:" + classesVal)
+        }
+
+        function delete_class() {
+            var target = document.getElementById("p12");
+            target.removeAttribute("class");
         }
     </script>
 
