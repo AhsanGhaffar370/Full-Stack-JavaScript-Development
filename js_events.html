@@ -55,13 +55,25 @@
     <h4 class="btn_block bg_g cl_b mb-4 ">Example5</h4>
 
     <form>
-        ZIP:
-        <input type="text" id="zip" onkeyup="fillCity();"> City:
-        <input type="text" id="city">
+        <h3>Form1</h3>
+        <label for="zip">zipcode:</label>
+        <input type="text" id="zip" onkeyup="fillCity();"><br>
+        <label for="city">City:</label>
+        <input type="text" id="city"><br>
 
         <input type="submit" value="Submit">
     </form>
 
+    <form>
+        <h3>Form2</h3>
+        <label for="name">Name:</label>
+        <input type="text" id="name" onkeyup="fillGender();">
+        <label for="gender">Gender:</label>
+        <input type="radio" name="gender" id="male" value="male">Male &nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="gender" id="female" value="female">Female<br>
+
+        <input type="submit" value="Submit">
+    </form>
 
 
     <h4 class="btn_block bg_g cl_b mb-4 ">Example6</h4>
@@ -94,7 +106,17 @@
 
     <h4 class="btn_block bg_g cl_b mb-4 ">Example11</h4>
 
-    <p id="p12" class="cl_bd bg_r size30 " onclick="delete_class()">Click this text</p>
+    <p id="p12" class="cl_bd bg_r size30 " onclick="delete_attribute()">Click this text</p>
+
+
+    <h4 class="btn_block bg_g cl_b mb-4 ">Example12</h4>
+
+    <input type="button" value="Add paragraph node" onclick="add_node()">
+
+    <div id="div12">
+
+    </div>
+
 
 
 
@@ -125,7 +147,19 @@
                 default:
                     cityName = "no city";
             }
+            // set input field value using JS
             document.getElementById("city").value = cityName;
+        }
+
+        function fillGender() {
+            var gender;
+            var nameEntered = document.getElementById("name").value;
+
+            if (nameEntered == "ahsan") {
+                document.getElementById("male").setAttribute("checked", "checked");
+            } else {
+                document.getElementById("male").removeAttribute("checked");
+            }
         }
 
         function expandLoris() {
@@ -179,9 +213,21 @@
             alert("p11 has class attribute? " + hasClass + "\np11 has total attributes: " + totalAttr + "\np11 class attribute is: " + attVal + "\np11 attribute is set as:" + classesVal)
         }
 
-        function delete_class() {
+        function delete_attribute() {
             var target = document.getElementById("p12");
             target.removeAttribute("class");
+        }
+
+        function add_node() {
+            var parent_div = document.getElementById("div12");
+
+            var nodeToAdd = document.createElement("p");
+            nodeToAdd.setAttribute("class", "bg_c");
+            nodeToAdd.setAttribute("style", "border: 1px solid red;");
+            var newTxt = document.createTextNode("Hello new node!");
+            nodeToAdd.appendChild(newTxt);
+
+            parent_div.appendChild(nodeToAdd);
         }
     </script>
 
