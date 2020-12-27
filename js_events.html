@@ -114,8 +114,11 @@
     <input type="button" value="Add paragraph node" onclick="add_node()">
 
     <div id="div12">
-
+        <p class="bg_c">old paragraph1</p>
+        <p class="bg_c">old paragraph2</p>
+        <p class="bg_c">old paragraph3</p>
     </div>
+
 
 
 
@@ -224,11 +227,21 @@
             var nodeToAdd = document.createElement("p");
             nodeToAdd.setAttribute("class", "bg_c");
             nodeToAdd.setAttribute("style", "border: 1px solid red;");
-            var newTxt = document.createTextNode("Hello new node!");
-            nodeToAdd.appendChild(newTxt);
+            var newTxt = document.createTextNode("new paragraph1");
+             nodeToAdd.appendChild(newTxt); 
 
-            parent_div.appendChild(nodeToAdd);
+            //parent_div.appendChild(nodeToAdd); // is se last position pr ek paragraph ki node ajaegi
+            var target = parent_div.childNodes[3];
+            parent_div.insertBefore(nodeToAdd, target.nextSibling);
         }
+
+        function delete_node(){
+            var parent_div = document.getElementById("div12");
+            var nodeToRemove = parent_div.childNodes[2];
+            parent_div.removeChild(nodeToRemove);
+        }
+
+        
     </script>
 
 

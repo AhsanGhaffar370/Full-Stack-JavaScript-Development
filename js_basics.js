@@ -19,18 +19,57 @@ new_age = Number(age) + 5;
 console.log("Your age is;", new_age);
 
 
-var person = {
+
+
+
+var whereWeAt = window.location.href; //file:///E:/Full-Stack-JavaScript-Development/js_basics.html
+console.log(whereWeAt)
+
+var theDomain = window.location.hostname; 
+console.log(theDomain)
+
+var thePath = window.location.pathname; // /E:/Full-Stack-JavaScript-Development/js_basics.html
+console.log(thePath)
+
+var theAnchor = window.location.hash;
+console.log(theAnchor)
+
+
+
+
+/////////////////////////
+//Objects and Constructors
+/////////////////////////
+
+
+
+var single_person = {
     firstName: "Ahsan",
     lastName: "Ghaffar",
     id: 5566,
     fullName: function() { return this.firstName + " " + this.lastName; }
 };
 
-console.log(person.firstName);
-console.log(person["lastName"]);
-console.log(person.fullName());
+console.log("single_person",single_person)
+console.log(single_person.firstName);
+console.log(single_person["lastName"]);
+console.log(single_person.fullName());
 
 
+//constuctors for multiple persons (It's also a of object)
+function person_cons(firstName, lastName, id) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.id = id;
+    this.fullName= function() { return this.firstName + " " + this.lastName; }
+}
+
+var person1 = new person_cons("ahsan","ghaffar", "123")
+var person2 = new person_cons("bisma","ghaffar", "456")
+var person3 = new person_cons("osama","ghaffar", "789")
+    
+console.log("person_cons",person1)
+console.log("person1",person1.fullName())
 
 
 
@@ -151,27 +190,27 @@ document.getElementById("arrow").innerHTML = hello("Arrow");
 // Promises
 ///////
 
-let myPromise = new Promise(function(myResolve, myReject) {
-    // "Producing Code" (May take some time)
-    myResolve(); // when successful
-    myReject(); // when error
-});
+// let myPromise = new Promise(function(myResolve, myReject) {
+//     // "Producing Code" (May take some time)
+//     myResolve(); // when successful
+//     myReject(); // when error
+// });
 
-// "Consuming Code" (Must wait for a fulfilled Promise).
+// // "Consuming Code" (Must wait for a fulfilled Promise).
 
-myPromise.then(
-    function(value) { /* code if successful */ },
-    function(error) { /* code if some error */ }
-);
+// myPromise.then(
+//     function(value) { /* code if successful */ },
+//     function(error) { /* code if some error */ }
+// );
 
 
-let myPromise = new Promise(function(myResolve, myReject) {
-    setTimeout(function() { myResolve("I love You !!"); }, 3000);
-});
+// let myPromise = new Promise(function(myResolve, myReject) {
+//     setTimeout(function() { myResolve("I love You !!"); }, 3000);
+// });
 
-myPromise.then(function(value) {
-    document.getElementById("demo").innerHTML = value;
-});
+// myPromise.then(function(value) {
+//     document.getElementById("demo").innerHTML = value;
+// });
 
 
 
