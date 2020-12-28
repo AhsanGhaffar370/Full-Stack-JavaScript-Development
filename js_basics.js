@@ -25,7 +25,7 @@ console.log("Your age is;", new_age);
 var whereWeAt = window.location.href; //file:///E:/Full-Stack-JavaScript-Development/js_basics.html
 console.log(whereWeAt)
 
-var theDomain = window.location.hostname; 
+var theDomain = window.location.hostname;
 console.log(theDomain)
 
 var thePath = window.location.pathname; // /E:/Full-Stack-JavaScript-Development/js_basics.html
@@ -50,7 +50,7 @@ var single_person = {
     fullName: function() { return this.firstName + " " + this.lastName; }
 };
 
-console.log("single_person",single_person)
+console.log("single_person", single_person)
 console.log(single_person.firstName);
 console.log(single_person["lastName"]);
 console.log(single_person.fullName());
@@ -61,15 +61,15 @@ function person_cons(firstName, lastName, id) {
     this.firstName = firstName;
     this.lastName = lastName;
     this.id = id;
-    this.fullName= function() { return this.firstName + " " + this.lastName; }
+    this.fullName = function() { return this.firstName + " " + this.lastName; }
 }
 
-var person1 = new person_cons("ahsan","ghaffar", "123")
-var person2 = new person_cons("bisma","ghaffar", "456")
-var person3 = new person_cons("osama","ghaffar", "789")
-    
-console.log("person_cons",person1)
-console.log("person1",person1.fullName())
+var person1 = new person_cons("ahsan", "ghaffar", "123")
+var person2 = new person_cons("bisma", "ghaffar", "456")
+var person3 = new person_cons("osama", "ghaffar", "789")
+
+console.log("person_cons", person1)
+console.log("person1", person1.fullName())
 
 
 
@@ -181,7 +181,9 @@ console.log("round() function:", Math.round(num1));
 // }
 
 //after (with arrow function)
-hello = (name) => { return ("Hello " + name); }
+// hello = (name) => { return ("Hello " + name); }
+//OR
+hello = (name) => { `Hello  ${name}` }
 
 document.getElementById("arrow").innerHTML = hello("Arrow");
 
