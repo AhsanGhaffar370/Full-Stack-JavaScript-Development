@@ -1,3 +1,12 @@
+
+
+
+
+/////////////////////////
+//Basics
+/////////////////////////
+
+
 document.getElementById("demo").innerHTML = person("ahsan", "21");
 
 function person(name1, age1) {
