@@ -1,7 +1,3 @@
-
-
-
-
 /////////////////////////
 //Basics
 /////////////////////////
@@ -13,21 +9,19 @@ function person(name1, age1) {
     return ("Your name is " + name1 + ". You're " + age1 + " years old.");
 }
 
-
 function current_date() {
     document.getElementById("demo1").innerHTML = Date();
 }
+current_date()
 
-var name = prompt("What is your name?", "Ahsan");
-console.log("Your name is:", name);
+// var name = prompt("What is your name?", "Ahsan");
+// console.log("Your name is:", name);
 
-var age = prompt("What is your age?");
+// var age = prompt("What is your age?");
 // new_age=parseInt(age)+5;
 // new_age=parseFloat(age)+5;
-new_age = Number(age) + 5;
-console.log("Your age is;", new_age);
-
-
+// new_age = Number(age) + 5;
+// console.log("Your age is;", new_age);
 
 
 
@@ -181,20 +175,34 @@ console.log("round() function:", Math.round(num1));
 
 
 ///////
-//JavaScript Arrow Function
+//JavaScript Function Declarations
 ///////
 
-//before
-// hello_old = function() {
-//     return "Hello old World!";
-// }
+//1st (simple function)
+function hello1() {
+    return "Hello simple function";
+}
 
-//after (with arrow function)
-// hello = (name) => { return ("Hello " + name); }
-//OR
-hello = (name) => { `Hello  ${name}` }
+//2nd (functino expression)
+hello2 = function() {
+    return "Hello functino expression";
+}
 
-document.getElementById("arrow").innerHTML = hello("Arrow");
+// 3rd ( IMMEDIATELY INVOKED FUNCTION EXPRESSIONS (llFE))
+hello3 = (function() {
+    return "Hello IMMEDIATELY INVOKED FUNCTION EXPRESSIONS (llFE)";
+}())
+
+//4th (arrow function)
+hello4 = (name) => { return ("Hello " + name); }
+    //OR
+hello5 = (name) => { return (`Hello new ${name}`) }
+
+
+
+document.getElementById("arrow").innerHTML = hello4("arrow function");
+
+console.log(hello5("arrow function"));
 
 
 ///////
