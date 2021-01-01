@@ -41,6 +41,29 @@ console.log(theAnchor)
 
 
 /////////////////////////
+//DOM
+/////////////////////////
+
+// document.getElementById("id")
+
+// document.getElementsByClassName("class_name")
+
+// document.getElementsByTagName("p")
+
+// document.getElementsByName("name")
+
+// document.querySelector("CSS_Selector")
+
+console.log(document.querySelector(".demo_class").)
+
+// document.querySelectorAll("CSS_Selector")
+
+
+
+
+
+
+/////////////////////////
 //Objects and Constructors
 /////////////////////////
 
