@@ -14,14 +14,32 @@
     <p id="demo" class="demo_class"></p>
 
 
-    <button onclick="document.getElementById('demo1').innerHTML = Date()">The time is?</button><br>
+    <h2>Ways to call Events</h2>
 
+    <h3>HTML EVENT HANDLERS (Don't use these ways)</h3>
+    <button onclick="document.getElementById('demo2').innerHTML = Date()">The time is?</button><br>
+    <p id="demo2"></p>
     <button onclick="this.innerHTML = Date()">The time is?</button><br>
+    <button onclick="current_date('demo1')">The time is?</button>
+    <p id="demo1"></p>
 
-    <button onclick="current_date()">The time is?</button>
+    <h3>TRADITIONAL DOM EVENT HANDLERS (very old)</h3>
+
+    <button id="btn1">The time is?</button>
+    <p id="demo3"></p>
 
 
-    <h2 id="demo1"></h2>
+    <h3>DOM Level 2 Event Listener (Advanced technique to call an event)</h3>
+
+    <button id="btn2">The time is?</button>
+    <p id="demo4"></p>
+
+
+
+
+
+
+
 
     <p id="arrow"></p>
 

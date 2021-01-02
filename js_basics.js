@@ -9,10 +9,25 @@ function person(name1, age1) {
     return ("Your name is " + name1 + ". You're " + age1 + " years old.");
 }
 
-function current_date() {
-    document.getElementById("demo1").innerHTML = Date();
+function current_date(el_id) {
+    var target = document.getElementById(el_id);
+    target.innerHTML = Date();
+    target.setAttribute("style", "border: 1px solid red;");
 }
-current_date()
+
+//TRADITIONAL DOM EVENT HANDLERS (very old)
+function current_date2() {
+    var target = document.getElementById("demo3");
+    target.innerHTML = Date();
+    target.setAttribute("style", "border: 1px solid red;");
+}
+document.getElementById("btn1").onclick = current_date2;
+
+
+//DOM Level 2 Event Listener (Advanced technique to call an event)
+document.getElementById("btn2").addEventListener('click', function() {
+    current_date('demo4')
+}, false);
 
 // var name = prompt("What is your name?", "Ahsan");
 // console.log("Your name is:", name);
@@ -54,9 +69,20 @@ console.log(theAnchor)
 
 // document.querySelector("CSS_Selector")
 
-console.log(document.querySelector(".demo_class").)
+console.log("Node name Query Selector: ", document.querySelector(".demo_class").nodeName)
 
 // document.querySelectorAll("CSS_Selector")
+
+
+
+
+
+/////////////////////////
+//Objects and Constructors
+/////////////////////////
+
+
+
 
 
 
