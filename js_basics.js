@@ -30,27 +30,27 @@ document.getElementById("btn2").addEventListener('click', function() {
 }, false);
 
 // var name = prompt("What is your name?", "Ahsan");
-// console.log("Your name is:", name);
+// document.write("<br>"+"Your name is:", name);
 
 // var age = prompt("What is your age?");
 // new_age=parseInt(age)+5;
 // new_age=parseFloat(age)+5;
 // new_age = Number(age) + 5;
-// console.log("Your age is;", new_age);
+// document.write("<br>"+"Your age is;", new_age);
 
 
 
 var whereWeAt = window.location.href; //file:///E:/Full-Stack-JavaScript-Development/js_basics.html
-console.log(whereWeAt)
+document.write("<br>" + whereWeAt)
 
 var theDomain = window.location.hostname;
-console.log(theDomain)
+document.write("<br>" + theDomain)
 
 var thePath = window.location.pathname; // /E:/Full-Stack-JavaScript-Development/js_basics.html
-console.log(thePath)
+document.write("<br>" + thePath)
 
 var theAnchor = window.location.hash;
-console.log(theAnchor)
+document.write("<br>" + theAnchor)
 
 
 
@@ -68,8 +68,7 @@ console.log(theAnchor)
 // document.getElementsByName("name")
 
 // document.querySelector("CSS_Selector")
-
-console.log("Node name Query Selector: ", document.querySelector(".demo_class").nodeName)
+document.write("<br>" + "<b>Node name Query Selector:</b> ", document.querySelector(".demo_class").nodeName)
 
 // document.querySelectorAll("CSS_Selector")
 
@@ -102,10 +101,10 @@ var single_person = {
     fullName: function() { return this.firstName + " " + this.lastName; }
 };
 
-console.log("single_person", single_person)
-console.log(single_person.firstName);
-console.log(single_person["lastName"]);
-console.log(single_person.fullName());
+document.write("<br>" + "single_person", single_person)
+document.write("<br>" + single_person.firstName);
+document.write("<br>" + single_person["lastName"]);
+document.write("<br>" + single_person.fullName());
 
 
 //constuctors for multiple persons (It's also a of object)
@@ -120,8 +119,8 @@ var person1 = new person_cons("ahsan", "ghaffar", "123")
 var person2 = new person_cons("bisma", "ghaffar", "456")
 var person3 = new person_cons("osama", "ghaffar", "789")
 
-console.log("person_cons", person1)
-console.log("person1", person1.fullName())
+document.write("<br>" + "person_cons", person1)
+document.write("<br>" + "person1", person1.fullName())
 
 
 
@@ -147,7 +146,7 @@ var res12 = arr2.unshift("mice", "ostrich");
 arr2.splice("mice2", "ostrich2");
 
 
-console.log("shift function remove and return first element of array:", res12)
+document.write("<br>" + "shift function remove and return first element of array:", res12)
 
 
 
@@ -185,22 +184,22 @@ var res10 = str2.toUpperCase();
 var res11 = str2.toLowerCase();
 
 
-console.log("Length of string:", len);
-console.log("indexOf:", ind1);
-console.log("index of last:", ind2);
-console.log("indexOf with start point:", ind3);
-console.log("search:", ind4);
-console.log("slice:", res1);
-console.log("slice -ve pos:", res2);
-console.log("slice with only start pos:", res3);
-console.log("slice with only -ve start pos", res4);
-console.log("substring:", res5);
-console.log("substr:", res6);
-console.log("replace:", res7);
-console.log("replace with case insensitive:", res8);
-console.log("replace all:", res9);
-console.log("to upper case:", res10);
-console.log("to lower case:", res11);
+document.write("<br>" + "Length of string:", len);
+document.write("<br>" + "indexOf:", ind1);
+document.write("<br>" + "index of last:", ind2);
+document.write("<br>" + "indexOf with start point:", ind3);
+document.write("<br>" + "search:", ind4);
+document.write("<br>" + "slice:", res1);
+document.write("<br>" + "slice -ve pos:", res2);
+document.write("<br>" + "slice with only start pos:", res3);
+document.write("<br>" + "slice with only -ve start pos", res4);
+document.write("<br>" + "substring:", res5);
+document.write("<br>" + "substr:", res6);
+document.write("<br>" + "replace:", res7);
+document.write("<br>" + "replace with case insensitive:", res8);
+document.write("<br>" + "replace all:", res9);
+document.write("<br>" + "to upper case:", res10);
+document.write("<br>" + "to lower case:", res11);
 
 
 
@@ -210,11 +209,11 @@ console.log("to lower case:", res11);
 
 var num1 = 23.45647283;
 
-console.log("ceil() function:", Math.ceil(num1));
-console.log("floor() function:", Math.floor(num1));
-console.log("round() function:", Math.round(num1));
-console.log("fixed() function:", num1.toFixed(2));
-console.log("round() function:", Math.round(num1));
+document.write("<br>" + "ceil() function:", Math.ceil(num1));
+document.write("<br>" + "floor() function:", Math.floor(num1));
+document.write("<br>" + "round() function:", Math.round(num1));
+document.write("<br>" + "fixed() function:", num1.toFixed(2));
+document.write("<br>" + "round() function:", Math.round(num1));
 
 
 
@@ -251,7 +250,7 @@ hello5 = (name) => { return (`Hello new ${name}`) }
 
 document.getElementById("arrow").innerHTML = hello4("arrow function");
 
-console.log(hello5("arrow function"));
+document.write("<br>" + hello5("arrow function"));
 
 
 ///////

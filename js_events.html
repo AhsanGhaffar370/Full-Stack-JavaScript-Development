@@ -228,20 +228,27 @@
             nodeToAdd.setAttribute("class", "bg_c");
             nodeToAdd.setAttribute("style", "border: 1px solid red;");
             var newTxt = document.createTextNode("new paragraph1");
-             nodeToAdd.appendChild(newTxt); 
+            nodeToAdd.appendChild(newTxt);
 
             //parent_div.appendChild(nodeToAdd); // is se last position pr ek paragraph ki node ajaegi
             var target = parent_div.childNodes[3];
             parent_div.insertBefore(nodeToAdd, target.nextSibling);
         }
 
-        function delete_node(){
+        function delete_node() {
             var parent_div = document.getElementById("div12");
             var nodeToRemove = parent_div.childNodes[2];
             parent_div.removeChild(nodeToRemove);
         }
 
-        
+
+        function checkUsername(e, minlength) {
+            var target = e.target; //get target of event
+        }
+        var el = document.getElementByid('username ');
+        el.addEventlistener('blur', function(e) {
+            checkUsername(e, 5);
+        }, false);
     </script>
 
 

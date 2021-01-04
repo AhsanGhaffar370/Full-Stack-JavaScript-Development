@@ -14,27 +14,14 @@ $(document).ready(function() {
         },
         function() {
             $("#err").hide();
-        });
+        }
+    );
 
 
     $(".hide1").click(function() {
         $(".p2").hide(1000);
     });
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -61,6 +48,7 @@ $(document).ready(function() {
 });
 
 
+//email validation function
 function check_mail() {
     $("#err").remove();
     var email_re = new RegExp(/^\w+@\w+(\.\w+)+$/);
@@ -86,6 +74,7 @@ function check_mail() {
 } //end of function
 
 
+// password validation function
 function check_pass() {
     $("#error").remove();
     var pass_re = new RegExp(/^.{6,30}$/);
