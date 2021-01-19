@@ -28,6 +28,9 @@ document.getElementById("btn1").onclick = current_date2;
 document.getElementById("btn2").addEventListener('click', function() {
     current_date('demo4')
 }, false);
+//our third param of DOM Level 2 Event Listener
+// false = event trigger from bottom to top(bubbling phae
+// true = event trigger from top to bottom (capturing phase)
 
 // var name = prompt("What is your name?", "Ahsan");
 // document.write("<br>"+"Your name is:", name);
