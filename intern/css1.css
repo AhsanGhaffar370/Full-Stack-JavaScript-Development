@@ -11,6 +11,13 @@
     justify-content: center;
 }
 
+.centre2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
 .tl2c {
     text-align: left !important;
 }
