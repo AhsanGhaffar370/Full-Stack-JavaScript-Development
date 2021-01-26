@@ -143,3 +143,12 @@ body {
 .mar-ve {
     margin-bottom: -35px;
 }
+
+
+.question .qq{
+    display: none;
+}
+
+.question .active{
+    display: block;
+}
