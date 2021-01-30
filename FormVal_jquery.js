@@ -97,3 +97,30 @@ function check_pass() {
         return true;
     }
 } //end of function
+
+
+
+
+//wordpress ka kaam
+
+// 	var term308=document.getElementsByClassName("term-308")[0];
+// // 	var term308=document.getElementById("content").childNodes[1];
+// 	term308.setAttribute("src","https://asanbuy.pk/wp-content/uploads/2021/01/clearance-saga-inner-banner-asanbuy.pk_.jpg");
+// 	var img1=term308.outerHTML;
+// 	var img2="<a href='https://asanbuy.pk/clearance-saga/'>"+img1+"</a>";
+// 	term308.outerHTML=img2;
+	
+// 	term308.setAttribute('id',"ab212");
+// 	document.getElementById("ab212").outerHTML=img2;
+	
+// 	var children = document.getElementsByClassName("term-308")[0];// any tag could be used here..
+
+//   for(var i = 0; i< children.length;i++)
+//   {
+//     if (children.childNodes[i].getAttribute('id') == 'content') // any attribute could be used here
+//     {
+//      console.log("ahsan bhai");
+//      console.log(children.childNodes[i].childNodes[1].outerHTML);
+
+//     }
+//   }

@@ -1,3 +1,5 @@
+console.log(document.getElementById("swap11").outerHTML);
+
 function popup(message) {
     alert(message);
 }
@@ -148,3 +150,4 @@ document.getElementById("shoppinglist").addEventListener('click', function(e) {
     itemDone(e);
 
 }, false);
+
