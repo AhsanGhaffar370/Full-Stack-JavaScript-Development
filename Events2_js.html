@@ -58,12 +58,15 @@
 
                 <div class="form-group row border_g">
                     <label class="b8 col-2 verCen p-0" for="state1">State:</label>
-                    <select class="form-control col-10 " id="state1" name="state">
-                        <option value="-1" disabled selected>Select State</option>
-                        <option value="Sindh">Sindh</option>
-                        <option value="Panjab">Panjab</option>
-                        <option value="KPK">KPK</option>
-                    </select>
+                    <div class="col-10">
+                        <select class="form-control" id="state1" name="state">
+                            <option value="-1" disabled selected>Select State</option>
+                            <option value="Sindh">Sindh</option>
+                            <option value="Panjab">Panjab</option>
+                            <option value="KPK">KPK</option>
+                        </select>
+                        <span id="choice" class="b6 cl_bl size13"></span>
+                    </div>
                 </div>
 
                 <div class="form-group row border_g">
@@ -114,26 +117,19 @@
 
     <!-- ################## JavaScript ###################  -->
     <script type="text/javascript">
+        let form = document.getElementById("form1");
+        let comp = document.getElementById("comp1");
+        let name = document.getElementById("name1");
+        let state = document.getElementById('state1');
+
         function setup() {
             document.getElementById("name1").focus();
         }
         window.addEventListener('load', setup, false);
 
-        let name = document.getElementById("name1");
-        let elMsg = document.getElementById('feedback');
-
-        function validate() {
-            // let name = document.getElementById("name1");
-            if (name.value.length > 5) {
-
-            }
-        }
-
-        let comp = document.getElementById("comp1");
 
         function charCount() {
             let count = this.value.length;
-
             let remain = 10 - count;
 
             if (remain < 0) {
@@ -144,11 +140,9 @@
                 document.getElementById("countchar").innerHTML = remain + " characters left";
             }
         }
-
         comp.addEventListener("keypress", charCount, "false");
 
 
-        let form = document.getElementById("form1");
 
         function checkTerm(event) {
             if (!document.getElementById('terms1').checked) {
@@ -156,9 +150,27 @@
                 event.preventDefault();
             }
         }
-
         form.addEventListener("submit", checkTerm, false);
 
+
+        function onStateSelect() {
+            let state = this.options[this.selectedIndex].value;
+            if (state == "Sindh") {
+                document.getElementById("choice").innerHTML = "Your name suggest, that you're from Panjab";
+            } else if (state == "Panjab") {
+                document.getElementById("choice").innerHTML = "Your name suggest, that you're from Sindh";
+            } else if (state == "KPK") {
+                document.getElementById("choice").innerHTML = "Your name suggest, that you're from Balochistan";
+            }
+        }
+        state.addEventListener("change", onStateSelect, "false");
+
+        // function validate() {
+        //     // let name = document.getElementById("name1");
+        //     if (name.value.length > 5) {
+
+        //     }
+        // }
         // name.addEventListener('blur', , false)
     </script>
 
