@@ -1401,6 +1401,14 @@ Spread of shadow:   Positive value will cause shadow to expand in all directions
                                                                     ========================
 */
 
+.border_g {
+    border: 2px solid rgb(199, 199, 199);
+    border-radius: 10px;
+    margin: 0px 15px 10px 15px !important;
+    /* margin-right: 10px !important; */
+    padding: 8px !important;
+}
+
 .rad5 {
     border-radius: 5px;
 }
