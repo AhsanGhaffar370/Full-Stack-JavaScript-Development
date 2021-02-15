@@ -1,25 +1,60 @@
 $(document).ready(function() {
 
+
+
     $(".img1").mouseenter(function() {
         $(".img1").css({ "border": "1px solid red" });
     });
-
     $(".img1").mouseleave(function() {
         $(".img1").css({ "border": "0px" });
     });
 
+    // 1st way of doing 
+    // $("#p1").mouseenter(function() {
+    //     $("#p1").after('<span id="err" class="size13 cl_r b7 d_in">paragraph hover</span>');
+    // });
+    // $("#p1").mouseleave(function() {
+    //     $("#err").hide();
+    // });
 
+    // 2nd way of doing  (jQuery Callback Functions)
     $("#p1").hover(function() {
-            $("#p1").after('<span id="err" class="size13 cl_r b7 d_in">paragraph hover</span>');
+            $("#p1").after('<span id="err" class="size13 cl_r b7 d_in"> (paragraph hovered)</span>');
+            // console.log($('#p1').attr('class'));
+            // console.log($('#p1').removeAttr('class'));
+            // console.log($('#p1').addClass('b8'));
+            // var a = ($('#p1').attr('class'));
+            // console.log($('#p1').attr('class', a + ' b8'));
         },
         function() {
             $("#err").hide();
         }
     );
 
-
     $(".hide1").click(function() {
-        $(".p2").hide(1000);
+        $(".p2").toggle(1000);
+    });
+
+
+    //  (jQuery Callback Functions)
+    $("#p0").hover(function() {
+            $(this).css({ 'color': 'red' });
+        },
+        function() {
+            $(this).css({ 'color': 'black' });
+        }
+    );
+
+    //  (jQuery Callback Functions)
+    $('#p0').click(function() {
+        $(this).animate({
+                opacity: 0.0,
+                paddingLeft: '+=450'
+            },
+            1000,
+            function() {
+                $(this).remove();
+            });
     });
 });
 
@@ -109,10 +144,10 @@ function check_pass() {
 // 	var img1=term308.outerHTML;
 // 	var img2="<a href='https://asanbuy.pk/clearance-saga/'>"+img1+"</a>";
 // 	term308.outerHTML=img2;
-	
+
 // 	term308.setAttribute('id',"ab212");
 // 	document.getElementById("ab212").outerHTML=img2;
-	
+
 // 	var children = document.getElementsByClassName("term-308")[0];// any tag could be used here..
 
 //   for(var i = 0; i< children.length;i++)
