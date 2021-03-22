@@ -99,7 +99,9 @@ function check_pass() {
 } //end of function
 
 
-
+//clearence saga link on brands images
+// $(".term-308 #content, .term-755 #content, .term-767 #content, .term-681 #content, .term-771 #content, .term-434 #content, .term-492 #content").find("img").eq(0).wrap("<a href='https://asanbuy.pk/clearance-saga/'></a>");
+// $(".term-308 #content, .term-755 #content, .term-767 #content, .term-681 #content, .term-771 #content, .term-434 #content, .term-492 #content").find("img").eq(0).attr("src", "https://asanbuy.pk/wp-content/uploads/2021/01/clearance-saga-inner-banner-asanbuy.pk_.jpg");
 
 //wordpress ka kaam
 
