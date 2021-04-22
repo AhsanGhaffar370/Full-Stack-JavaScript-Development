@@ -135,6 +135,7 @@ function itemDone(e) {
 
     //Remove Item From the list
     target = e.target;
+    // alert(e.target.value);
     elParent = target.parentNode;
     elGrandParent = elParent.parentNode;
 
