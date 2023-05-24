@@ -16,18 +16,53 @@ function getPosts() {
 function createPost(post , callback) {
     setTimeout(() => {
         posts.push(post);
-        // callback();
+        callback();
+    }, 4000);
+}
+
+
+// createPost({ title: 'Post Three', body: 'This is post three'});
+createPost({ title: 'Post Three', body: 'This is post three'}, getPosts);
+
+// getPosts();
+
+
+
+
+
+/////////////
+// Example 2
+/////////////
+
+function getName(name , callback) {
+    setTimeout(() => {
+        console.log('inside name api');
+
+        // API -> find user record exist in database
+        let api_response = true;
+
+        callback(name);
     }, 2000);
+}
+
+function getHobbies(name, callback) {
+    setTimeout(() => {
+        console.log('inside hobbies api');
+
+        // API -> find hobbies of a person from name
+        let api_response = ['Cricket', 'reading', 'biking'];
+        
+        callback(api_response);
+    }, 1000);
 }
 
 
 
 
-//////////////////////////
-// Callback
-/////////////////////////
 
-createPost({ title: 'Post Three', body: 'This is post three'});
-// createPost({ title: 'Post Three', body: 'This is post three'}, getPosts);
-
-getPosts();
+const name = getName('Ahsan', (name) => {
+    console.log(name);
+    getHobbies(name, (hobby) => {
+        console.log(hobby);
+    })
+})
